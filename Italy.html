@@ -1,0 +1,679 @@
+<!DOCTYPE html>
+<html lang="he" dir="rtl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>איטליה 2026 · דולומיטים, אגם גארדה, לומברדיה — טבלת מסלול</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Frank+Ruhl+Libre:wght@500;700;900&family=Heebo:wght@300;400;500;700&display=swap" rel="stylesheet">
+<style>
+:root{
+  --ink:#17242c;
+  --paper:#f4f7f6;
+  --card:#ffffff;
+  --line:#dde5e3;
+  --muted:#5c6f74;
+  --como:#35618f;
+  --dolomiti:#47774e;
+  --garda:#0f8c97;
+  --milano:#8a3b4a;
+  --gold:#c79a3d;
+}
+*{box-sizing:border-box;margin:0;padding:0}
+body{background:var(--paper);color:var(--ink);font-family:'Heebo',system-ui,sans-serif;font-weight:400;line-height:1.55}
+a{color:inherit}
+
+/* ---------- HERO ---------- */
+.hero{background:linear-gradient(160deg,#17242c 0%,#1e3a45 55%,#0f8c97 130%);color:#f2f6f5;padding:54px 24px 40px;position:relative;overflow:hidden}
+.hero::after{content:"";position:absolute;inset:auto -5% -62% -5%;height:120px;
+  background:linear-gradient(#f4f7f6,#f4f7f6);
+  clip-path:polygon(0 100%,0 55%,8% 70%,16% 40%,25% 65%,33% 25%,42% 60%,50% 35%,59% 68%,68% 30%,77% 62%,86% 45%,94% 70%,100% 50%,100% 100%);
+  opacity:.14}
+.hero-inner{max-width:1080px;margin:0 auto}
+.hero .kicker{letter-spacing:.35em;font-size:12px;font-weight:500;color:#9fd4d0;text-transform:uppercase}
+.hero h1{font-family:'Frank Ruhl Libre',serif;font-weight:900;font-size:clamp(30px,5vw,52px);margin:10px 0 6px}
+.hero .sub{font-size:17px;color:#c8dbd9;max-width:640px}
+.chips{display:flex;flex-wrap:wrap;gap:10px;margin-top:22px}
+.chip{background:rgba(255,255,255,.09);border:1px solid rgba(255,255,255,.22);border-radius:999px;padding:7px 16px;font-size:14px}
+.chip b{font-weight:700;color:#fff}
+
+/* ---------- LEGEND ---------- */
+.legend{max-width:1080px;margin:26px auto 0;padding:0 24px;display:flex;flex-wrap:wrap;gap:16px;font-size:13.5px;color:var(--muted)}
+.legend span{display:flex;align-items:center;gap:7px}
+.dot{width:11px;height:11px;border-radius:50%;display:inline-block;flex:none}
+
+/* ---------- REGION ---------- */
+main{max-width:1080px;margin:0 auto;padding:8px 24px 70px}
+.region{margin-top:44px}
+.region-head{display:flex;align-items:baseline;gap:14px;border-bottom:3px solid var(--rc);padding-bottom:10px;flex-wrap:wrap}
+.region-head .num{font-family:'Frank Ruhl Libre',serif;font-weight:900;font-size:15px;color:#fff;background:var(--rc);border-radius:6px;padding:3px 11px;letter-spacing:.05em}
+.region-head h2{font-family:'Frank Ruhl Libre',serif;font-weight:700;font-size:clamp(22px,3vw,30px)}
+.region-head .dates{color:var(--muted);font-size:14.5px;margin-inline-start:auto}
+
+/* ---------- HOTEL CARD ---------- */
+.hotel{background:var(--card);border:1px solid var(--line);border-inline-start:6px solid var(--rc);border-radius:14px;margin-top:18px;padding:18px 20px;display:flex;flex-wrap:wrap;gap:14px 26px;align-items:center;box-shadow:0 2px 10px rgba(23,36,44,.05)}
+.hotel .icon{font-size:26px}
+.hotel .h-main{flex:1;min-width:220px}
+.hotel .h-label{font-size:11.5px;letter-spacing:.22em;color:var(--rc);font-weight:700}
+.hotel .h-name{font-family:'Frank Ruhl Libre',serif;font-weight:700;font-size:20px;margin-top:2px}
+.hotel .h-meta{color:var(--muted);font-size:14px;margin-top:3px}
+.hotel .h-facts{display:flex;gap:22px;font-size:14px}
+.hotel .h-facts b{display:block;font-size:17px;font-weight:700}
+.pin{display:inline-flex;align-items:center;gap:6px;background:var(--rc);color:#fff;text-decoration:none;font-size:13.5px;font-weight:500;border-radius:999px;padding:8px 16px;white-space:nowrap;transition:filter .15s}
+.pin:hover{filter:brightness(1.12)}
+.pin.ghost{background:transparent;color:var(--rc);border:1.5px solid var(--rc)}
+
+/* ---------- DAY ---------- */
+.day{margin-top:26px;background:var(--card);border:1px solid var(--line);border-radius:14px;overflow:hidden;box-shadow:0 2px 10px rgba(23,36,44,.05)}
+.day-head{display:flex;align-items:center;gap:12px;padding:13px 18px;background:color-mix(in srgb,var(--rc) 8%,#fff);border-bottom:1px solid var(--line);flex-wrap:wrap}
+.day-head .d-date{font-family:'Frank Ruhl Libre',serif;font-weight:900;font-size:17px;color:var(--rc);white-space:nowrap}
+.day-head .d-title{font-weight:500;font-size:15.5px}
+.day-head .tag{margin-inline-start:auto;font-size:12px;background:var(--gold);color:#fff;border-radius:999px;padding:3px 12px;font-weight:500;white-space:nowrap}
+
+table{width:100%;border-collapse:collapse;font-size:14.5px}
+th{background:#fbfcfc;color:var(--muted);font-weight:500;font-size:12.5px;letter-spacing:.06em;text-align:right;padding:9px 14px;border-bottom:1px solid var(--line)}
+td{padding:13px 14px;border-bottom:1px solid var(--line);vertical-align:top}
+tr:last-child td{border-bottom:none}
+tr:hover td{background:#f7fafa}
+
+/* route rail */
+.rail{width:34px;padding-inline:0 !important;position:relative}
+.rail::before{content:"";position:absolute;top:0;bottom:0;right:15px;width:3px;background:color-mix(in srgb,var(--rc) 30%,#fff)}
+tr:first-of-type .rail::before{top:22px}
+tr:last-of-type .rail::before{bottom:calc(100% - 22px)}
+.rail .stop{position:absolute;top:16px;right:10px;width:13px;height:13px;border-radius:50%;background:#fff;border:3.5px solid var(--rc)}
+.rail .stop.hotelstop{background:var(--rc)}
+
+.place b{font-weight:700;font-size:15px}
+.place .en{display:block;color:var(--muted);font-size:12.5px;direction:ltr;text-align:right}
+.drive{white-space:nowrap;font-weight:500}
+.drive small{display:block;color:var(--muted);font-weight:400}
+.est{color:var(--rc);font-weight:700}
+.coord a{direction:ltr;display:inline-block;font-family:'Heebo';font-size:13px;background:#eef4f3;border:1px solid var(--line);border-radius:8px;padding:4px 9px;text-decoration:none;color:var(--ink);white-space:nowrap;transition:all .15s}
+.coord a:hover{background:var(--rc);color:#fff;border-color:var(--rc)}
+.coord a::before{content:"📍 "}
+td.notes{color:#33454c;font-size:13.5px;min-width:180px}
+td.notes .warn{color:#a04324;font-weight:500}
+
+/* ---------- FOOT ---------- */
+.foot{max-width:1080px;margin:40px auto 0;padding:0 24px;color:var(--muted);font-size:13px;line-height:1.8}
+.foot b{color:var(--ink)}
+
+@media(max-width:820px){
+  table,thead,tbody,tr{display:block}
+  thead{display:none}
+  tr{border-bottom:6px solid var(--paper)}
+  td{display:block;border-bottom:1px dashed var(--line);padding:9px 16px 9px 16px}
+  td.rail{display:none}
+  td::before{content:attr(data-l);display:block;font-size:11px;letter-spacing:.1em;color:var(--muted);margin-bottom:2px}
+  .hotel .h-facts{width:100%}
+  .region-head .dates{margin-inline-start:0;width:100%}
+}
+@media print{
+  .hero{background:#17242c !important;-webkit-print-color-adjust:exact}
+  .day,.hotel{box-shadow:none;break-inside:avoid}
+}
+</style>
+</head>
+<body>
+
+<header class="hero">
+  <div class="hero-inner">
+    <div class="kicker">ITALIA · 24.7 – 5.8.2026</div>
+    <h1>איטליה 2026 — דולומיטים, אגם גארדה, לומברדיה</h1>
+    <p class="sub">כל המסלול בטבלה אחת: לפי סדר הימים, עם זמני נסיעה מהמלון או מהתחנה הקודמת, וקואורדינטות לנעיצה בגוגל מפות בלחיצה.</p>
+    <div class="chips">
+      <span class="chip"><b>12</b> לילות</span>
+      <span class="chip"><b>4</b> בסיסי לינה</span>
+      <span class="chip"><b>~40</b> תחנות ואטרקציות</span>
+      <span class="chip">סה״כ לינה <b>₪16,227</b></span>
+      <span class="chip">נחיתה והמראה: <b>מילאנו מלפנסה MXP</b></span>
+    </div>
+  </div>
+</header>
+
+<div class="legend">
+  <span><span class="dot" style="background:var(--como)"></span> אגם קומו ולקו</span>
+  <span><span class="dot" style="background:var(--dolomiti)"></span> דולומיטים</span>
+  <span><span class="dot" style="background:var(--garda)"></span> אגם גארדה</span>
+  <span><span class="dot" style="background:var(--milano)"></span> מילאנו</span>
+  <span>· זמן עם <b class="est" style="color:var(--gold)">≈</b> = חושב מחדש מהמלון שלכם בפועל (במסמך המקורי חושב ממרכז העיר)</span>
+</div>
+
+<main>
+
+<!-- ================= REGION 1 : COMO ================= -->
+<section class="region" style="--rc:var(--como)">
+  <div class="region-head">
+    <span class="num">בסיס 1</span>
+    <h2>אגם קומו ולקו</h2>
+    <span class="dates">שישי–ראשון · 24–26 ביולי · 2 לילות</span>
+  </div>
+
+  <div class="hotel">
+    <span class="icon">🏨</span>
+    <div class="h-main">
+      <div class="h-label">המלון שלכם</div>
+      <div class="h-name">Hotel San Gerolamo · ורקוראגו (Vercurago)</div>
+      <div class="h-meta">24–26 ביולי · 2 חדרים · ביטול חינם · מאושר · כ־10 דק׳ מלקו, על אגם גרלאטה</div>
+    </div>
+    <div class="h-facts"><span><b>₪2,544</b>2 לילות</span></div>
+    <a class="pin" href="https://www.google.com/maps/search/?api=1&query=Hotel+San+Gerolamo+Vercurago" target="_blank">נעץ מלון במפה</a>
+    <a class="pin ghost" href="https://www.google.com/maps/search/?api=1&query=45.8110,9.4222" target="_blank">45.8110, 9.4222</a>
+  </div>
+
+  <div class="day">
+    <div class="day-head"><span class="d-date">שישי 24/7</span><span class="d-title">נחיתה · קומו סיטי · לקו</span><span class="tag">יום נחיתה</span></div>
+    <table>
+      <thead><tr><th class="rail"></th><th>המקום</th><th>מה עושים שם</th><th>זמן נסיעה</th><th>קואורדינטות</th><th>כדאי לדעת</th></tr></thead>
+      <tbody>
+        <tr>
+          <td class="rail"><span class="stop hotelstop"></span></td>
+          <td class="place" data-l="המקום"><b>נמל תעופה מילאנו־מלפנסה</b><span class="en">Milano Malpensa (MXP)</span></td>
+          <td data-l="מה עושים">נחיתה, איסוף רכב שכור ויציאה לדרך</td>
+          <td class="drive" data-l="זמן נסיעה">נקודת התחלה</td>
+          <td class="coord" data-l="קואורדינטות"><a href="https://www.google.com/maps/search/?api=1&query=45.6301,8.7255" target="_blank">45.6301, 8.7255</a></td>
+          <td class="notes" data-l="כדאי לדעת">לחשב ~45 דק׳ לשחרור הרכב לפני היציאה</td>
+        </tr>
+        <tr>
+          <td class="rail"><span class="stop"></span></td>
+          <td class="place" data-l="המקום"><b>העיר קומו</b><span class="en">Como City</span></td>
+          <td data-l="מה עושים">טיול ברחובות ההיסטוריים, הדואומו, עלייה בפוניקולר לברונטה וטיילת האגם (Lungolago Viale Geno)</td>
+          <td class="drive" data-l="זמן נסיעה">38 דק׳<small>46 ק״מ מ־MXP</small></td>
+          <td class="coord" data-l="קואורדינטות"><a href="https://www.google.com/maps/search/?api=1&query=45.8121,9.0810" target="_blank">45.8121, 9.0810</a></td>
+          <td class="notes" data-l="כדאי לדעת">סיור משוער ~3 שעות כולל הפוניקולר (נסיעה של ~7 דק׳ לברונטה)</td>
+        </tr>
+        <tr>
+          <td class="rail"><span class="stop"></span></td>
+          <td class="place" data-l="המקום"><b>לקו</b><span class="en">Lecco</span></td>
+          <td data-l="מה עושים">טיילת האגם, המרכז ההיסטורי ומגדל Torre Viscontea מימי הביניים</td>
+          <td class="drive" data-l="זמן נסיעה">45 דק׳<small>32.5 ק״מ מקומו</small></td>
+          <td class="coord" data-l="קואורדינטות"><a href="https://www.google.com/maps/search/?api=1&query=45.8554,9.3932" target="_blank">45.8554, 9.3932</a></td>
+          <td class="notes" data-l="כדאי לדעת">טיול משוער 1–2 שעות · צמוד למלון — אפשר גם לחזור לכאן לערב</td>
+        </tr>
+        <tr>
+          <td class="rail"><span class="stop hotelstop"></span></td>
+          <td class="place" data-l="המקום"><b>צ׳ק־אין: Hotel San Gerolamo</b><span class="en">Vercurago</span></td>
+          <td data-l="מה עושים">התארגנות ולינה</td>
+          <td class="drive" data-l="זמן נסיעה"><span class="est">≈</span> 10 דק׳<small>~5 ק״מ מלקו</small></td>
+          <td class="coord" data-l="קואורדינטות"><a href="https://www.google.com/maps/search/?api=1&query=45.8110,9.4222" target="_blank">45.8110, 9.4222</a></td>
+          <td class="notes" data-l="כדאי לדעת">המלון קרוב מאוד ללקו — יתרון גדול ביום הנחיתה</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+
+  <div class="day">
+    <div class="day-head"><span class="d-date">שבת 25/7</span><span class="d-title">וארנה · שייט לבלאג׳יו · בלאנו</span></div>
+    <table>
+      <thead><tr><th class="rail"></th><th>המקום</th><th>מה עושים שם</th><th>זמן נסיעה</th><th>קואורדינטות</th><th>כדאי לדעת</th></tr></thead>
+      <tbody>
+        <tr>
+          <td class="rail"><span class="stop"></span></td>
+          <td class="place" data-l="המקום"><b>וארנה</b><span class="en">Varenna</span></td>
+          <td data-l="מה עושים">סמטאות ציוריות, וילות היסטוריות (וילה מונסטרו) וטיילת יפהפייה על האגם</td>
+          <td class="drive" data-l="זמן נסיעה"><span class="est">≈</span> 40 דק׳<small>מהמלון, לאורך החוף המזרחי</small></td>
+          <td class="coord" data-l="קואורדינטות"><a href="https://www.google.com/maps/search/?api=1&query=46.0104,9.2848" target="_blank">46.0104, 9.2848</a></td>
+          <td class="notes" data-l="כדאי לדעת">חניה: Viale Giovanni Polvani 1 · טיול משוער 2–3 שעות · כניסה לווילה ~10€, מתחת לגיל 11 חינם</td>
+        </tr>
+        <tr>
+          <td class="rail"><span class="stop"></span></td>
+          <td class="place" data-l="המקום"><b>שייט לבלאג׳יו</b><span class="en">Bellagio (ferry)</span></td>
+          <td data-l="מה עושים">מעבורת מווארנה ל״פנינת אגם קומו״ — סמטאות מדרגות, גלידה ונוף, וחזרה בשייט</td>
+          <td class="drive" data-l="זמן נסיעה">~15 דק׳ שייט<small>לכל כיוון</small></td>
+          <td class="coord" data-l="קואורדינטות"><a href="https://www.google.com/maps/search/?api=1&query=45.9787,9.2618" target="_blank">45.9787, 9.2618</a></td>
+          <td class="notes" data-l="כדאי לדעת">כרטיס הלוך־ושוב: 15€ למבוגר, 7.5€ לילד</td>
+        </tr>
+        <tr>
+          <td class="rail"><span class="stop"></span></td>
+          <td class="place" data-l="המקום"><b>בלאנו + מפל אורידו די בלאנו</b><span class="en">Bellano · Orrido di Bellano</span></td>
+          <td data-l="מה עושים">עיירה קטנה ונחמדה + קניון נהר דרמטי עם גשרים תלויים מעל המפל</td>
+          <td class="drive" data-l="זמן נסיעה">8 דק׳<small>4.8 ק״מ מווארנה</small></td>
+          <td class="coord" data-l="קואורדינטות"><a href="https://www.google.com/maps/search/?api=1&query=46.0430,9.3040" target="_blank">46.0430, 9.3040</a></td>
+          <td class="notes" data-l="כדאי לדעת">ביקור של שעה עד שעה וחצי · חזרה למלון: <span class="est">≈</span> 50 דק׳</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</section>
+
+<!-- ================= REGION 2 : DOLOMITES ================= -->
+<section class="region" style="--rc:var(--dolomiti)">
+  <div class="region-head">
+    <span class="num">בסיס 2</span>
+    <h2>דולומיטים — דרום טירול</h2>
+    <span class="dates">ראשון–חמישי · 26–30 ביולי · 4 לילות</span>
+  </div>
+
+  <div class="hotel">
+    <span class="icon">⛰️</span>
+    <div class="h-main">
+      <div class="h-label">המלון שלכם</div>
+      <div class="h-name">Gasthaus zum Weissen Kreuz · לצפונס (Lazfons)</div>
+      <div class="h-meta">26–30 ביולי · 2 חדרים · ביטול חינם · מאושר · כפר הרים מעל קיוזה/קלאוזן, ~15 דק׳ מכביש A22</div>
+    </div>
+    <div class="h-facts"><span><b>₪4,648</b>4 לילות</span></div>
+    <a class="pin" href="https://www.google.com/maps/search/?api=1&query=Gasthaus+zum+Weissen+Kreuz+Latzfons" target="_blank">נעץ מלון במפה</a>
+    <a class="pin ghost" href="https://www.google.com/maps/search/?api=1&query=46.6403,11.5280" target="_blank">46.6403, 11.5280</a>
+  </div>
+
+  <div class="day">
+    <div class="day-head"><span class="d-date">ראשון 26/7</span><span class="d-title">בורגטו · (אופציה: טרנטו) · אגם קלדארו</span><span class="tag">יום מעבר</span></div>
+    <table>
+      <thead><tr><th class="rail"></th><th>המקום</th><th>מה עושים שם</th><th>זמן נסיעה</th><th>קואורדינטות</th><th>כדאי לדעת</th></tr></thead>
+      <tbody>
+        <tr>
+          <td class="rail"><span class="stop"></span></td>
+          <td class="place" data-l="המקום"><b>בורגטו סול מינצ׳ו</b><span class="en">Borghetto sul Mincio</span></td>
+          <td data-l="מה עושים">״ונציה הקטנה״ — כפר עתיק שנהר עובר במרכזו, טחנות מים וגשר ויסקונטי</td>
+          <td class="drive" data-l="זמן נסיעה"><span class="est">≈</span> 2:00 ש׳<small>~175 ק״מ מהמלון (A4)</small></td>
+          <td class="coord" data-l="קואורדינטות"><a href="https://www.google.com/maps/search/?api=1&query=45.3527,10.7290" target="_blank">45.3527, 10.7290</a></td>
+          <td class="notes" data-l="כדאי לדעת">חניה: Via Michelangelo Buonarroti · מאחת העיירות היפות באזור</td>
+        </tr>
+        <tr>
+          <td class="rail"><span class="stop"></span></td>
+          <td class="place" data-l="המקום"><b>טרנטו (אופציה)</b><span class="en">Trento</span></td>
+          <td data-l="מה עושים">עיר עתיקה: פיאצה דל דואומו, מזרקת נפטון, קתדרלת סן ויג׳יליו, ארמונות מצוירים</td>
+          <td class="drive" data-l="זמן נסיעה">1:10 ש׳<small>94.6 ק״מ מבורגטו</small></td>
+          <td class="coord" data-l="קואורדינטות"><a href="https://www.google.com/maps/search/?api=1&query=46.0679,11.1211" target="_blank">46.0679, 11.1211</a></td>
+          <td class="notes" data-l="כדאי לדעת">אופציונלי — ויתור מקצר משמעותית את יום המעבר</td>
+        </tr>
+        <tr>
+          <td class="rail"><span class="stop"></span></td>
+          <td class="place" data-l="המקום"><b>אגם קלדארו + יקב Cantina Kaltern</b><span class="en">Lago di Caldaro</span></td>
+          <td data-l="מה עושים">עצירת נוף באגם החמים באלפים וטעימות ביקב המקומי בדרך היין</td>
+          <td class="drive" data-l="זמן נסיעה">35 דק׳<small>45.9 ק״מ מטרנטו</small></td>
+          <td class="coord" data-l="קואורדינטות"><a href="https://www.google.com/maps/search/?api=1&query=46.4180,11.2464" target="_blank">46.4180, 11.2464</a></td>
+          <td class="notes" data-l="כדאי לדעת">אזור דרך היין של דרום טירול</td>
+        </tr>
+        <tr>
+          <td class="rail"><span class="stop hotelstop"></span></td>
+          <td class="place" data-l="המקום"><b>צ׳ק־אין: Gasthaus zum Weissen Kreuz</b><span class="en">Latzfons</span></td>
+          <td data-l="מה עושים">התארגנות ולינה בכפר אלפיני</td>
+          <td class="drive" data-l="זמן נסיעה"><span class="est">≈</span> 50 דק׳<small>~55 ק״מ מקלדארו (A22 + עלייה להר)</small></td>
+          <td class="coord" data-l="קואורדינטות"><a href="https://www.google.com/maps/search/?api=1&query=46.6403,11.5280" target="_blank">46.6403, 11.5280</a></td>
+          <td class="notes" data-l="כדאי לדעת">8 ק״מ אחרונים בכביש הר מתפתל מקיוזה — עדיף להגיע באור יום</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+
+  <div class="day">
+    <div class="day-head"><span class="d-date">שני 27/7</span><span class="d-title">אורטיזיי · פארק חבלים · סנטה מגדלנה</span></div>
+    <table>
+      <thead><tr><th class="rail"></th><th>המקום</th><th>מה עושים שם</th><th>זמן נסיעה</th><th>קואורדינטות</th><th>כדאי לדעת</th></tr></thead>
+      <tbody>
+        <tr>
+          <td class="rail"><span class="stop"></span></td>
+          <td class="place" data-l="המקום"><b>אורטיזיי</b><span class="en">Ortisei · Val Gardena</span></td>
+          <td data-l="מה עושים">עיירה אלפינית ציורית + רכבלים: אלפה די סיוזי (1,860 מ׳) או סצ׳דה (2,500 מ׳, נוף דרמטי)</td>
+          <td class="drive" data-l="זמן נסיעה"><span class="est">≈</span> 40 דק׳<small>~30 ק״מ מהמלון דרך קיוזה</small></td>
+          <td class="coord" data-l="קואורדינטות"><a href="https://www.google.com/maps/search/?api=1&query=46.5761,11.6717" target="_blank">46.5761, 11.6717</a></td>
+          <td class="notes" data-l="כדאי לדעת">בסצ׳דה: 2 רכבלים לפסגה + הליכה של פחות מק״מ לנקודת התצפית המפורסמת · תחנת הרכבל ~10 דק׳ הליכה מהחניה</td>
+        </tr>
+        <tr>
+          <td class="rail"><span class="stop"></span></td>
+          <td class="place" data-l="המקום"><b>פארק חבלים אורטיזיי</b><span class="en">Adventure Park Col de Flam</span></td>
+          <td data-l="מה עושים">מסלולי חבלים ואומגות בין העצים — מעולה לילדים</td>
+          <td class="drive" data-l="זמן נסיעה">3 דק׳<small>0.8 ק״מ מאורטיזיי</small></td>
+          <td class="coord" data-l="קואורדינטות"><a href="https://www.google.com/maps/search/?api=1&query=46.5735,11.6830" target="_blank">46.5735, 11.6830</a></td>
+          <td class="notes" data-l="כדאי לדעת">אם עולים בסצ׳דה — הפארק ממש ליד חניית הרכבל</td>
+        </tr>
+        <tr>
+          <td class="rail"><span class="stop"></span></td>
+          <td class="place" data-l="המקום"><b>סנטה מגדלנה</b><span class="en">Santa Maddalena · Val di Funes</span></td>
+          <td data-l="מה עושים">הכנסייה והכפר המצולמים ביותר בדולומיטים, על רקע רכס האודלה</td>
+          <td class="drive" data-l="זמן נסיעה">44 דק׳<small>33.7 ק״מ מפארק החבלים</small></td>
+          <td class="coord" data-l="קואורדינטות"><a href="https://www.google.com/maps/search/?api=1&query=46.6410,11.7230" target="_blank">46.6410, 11.7230</a></td>
+          <td class="notes" data-l="כדאי לדעת">שעת זהב = תמונות מושלמות · חזרה למלון: <span class="est">≈</span> 35 דק׳ בלבד (העמק צמוד ללצפונס)</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+
+  <div class="day">
+    <div class="day-head"><span class="d-date">שלישי 28/7</span><span class="d-title">אגם בראייס · מגלשות הרים · מפלי גילפנקלאם · ויפיטנו</span></div>
+    <table>
+      <thead><tr><th class="rail"></th><th>המקום</th><th>מה עושים שם</th><th>זמן נסיעה</th><th>קואורדינטות</th><th>כדאי לדעת</th></tr></thead>
+      <tbody>
+        <tr>
+          <td class="rail"><span class="stop"></span></td>
+          <td class="place" data-l="המקום"><b>אגם בראייס</b><span class="en">Lago di Braies</span></td>
+          <td data-l="מה עושים">מהאגמים היפים בדולומיטים — מים בצבע תכלת, שכירת סירת עץ, הקפת האגם ברגל</td>
+          <td class="drive" data-l="זמן נסיעה"><span class="est">≈</span> 1:20 ש׳<small>~95 ק״מ מהמלון (A22 + ואל פוסטריה)</small></td>
+          <td class="coord" data-l="קואורדינטות"><a href="https://www.google.com/maps/search/?api=1&query=46.6989,12.0847" target="_blank">46.6989, 12.0847</a></td>
+          <td class="notes" data-l="כדאי לדעת"><span class="warn">בקיץ חובה לשריין חניה מראש: prags.bz</span> · חניה: St. Veit 27, Braies · להגיע מוקדם</td>
+        </tr>
+        <tr>
+          <td class="rail"><span class="stop"></span></td>
+          <td class="place" data-l="המקום"><b>מגלשות הרים FUNBOB (אופציה)</b><span class="en">San Candido · Monte Baranci</span></td>
+          <td data-l="מה עושים">רכבל להר בראנצ׳י ומגלשת ההרים הארוכה באיטליה + אטרקציות לילדים בפסגה</td>
+          <td class="drive" data-l="זמן נסיעה">24 דק׳<small>20.2 ק״מ מבראייס</small></td>
+          <td class="coord" data-l="קואורדינטות"><a href="https://www.google.com/maps/search/?api=1&query=46.7318,12.2760" target="_blank">46.7318, 12.2760</a></td>
+          <td class="notes" data-l="כדאי לדעת">ויתור על תחנה זו (או על השתיים הבאות) חוסך כשעת נסיעה</td>
+        </tr>
+        <tr>
+          <td class="rail"><span class="stop"></span></td>
+          <td class="place" data-l="המקום"><b>מפלי גילפנקלאם</b><span class="en">Gilfenklamm · Cascate di Stanghe</span></td>
+          <td data-l="מה עושים">קניון שיש לבן עם גשרי עץ מעל מים שוצפים — מסלול הליכה מרשים</td>
+          <td class="drive" data-l="זמן נסיעה">1:25 ש׳<small>88.4 ק״מ מסן־קנדידו</small></td>
+          <td class="coord" data-l="קואורדינטות"><a href="https://www.google.com/maps/search/?api=1&query=46.8780,11.3760" target="_blank">46.8780, 11.3760</a></td>
+          <td class="notes" data-l="כדאי לדעת">טיול משוער 1–1.5 שעות</td>
+        </tr>
+        <tr>
+          <td class="rail"><span class="stop"></span></td>
+          <td class="place" data-l="המקום"><b>ויפיטנו</b><span class="en">Vipiteno / Sterzing</span></td>
+          <td data-l="מה עושים">עיירה אלפינית צבעונית — רחוב ראשי, מגדל השעון וגלידה טובה</td>
+          <td class="drive" data-l="זמן נסיעה">11 דק׳<small>8 ק״מ מהמפלים</small></td>
+          <td class="coord" data-l="קואורדינטות"><a href="https://www.google.com/maps/search/?api=1&query=46.8970,11.4330" target="_blank">46.8970, 11.4330</a></td>
+          <td class="notes" data-l="כדאי לדעת">חזרה למלון: <span class="est">≈</span> 45 דק׳ (~40 ק״מ)</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+
+  <div class="day">
+    <div class="day-head"><span class="d-date">רביעי 29/7</span><span class="d-title">סאס פורדוי · פליי־ליין · אגם קארצה · ספא</span></div>
+    <table>
+      <thead><tr><th class="rail"></th><th>המקום</th><th>מה עושים שם</th><th>זמן נסיעה</th><th>קואורדינטות</th><th>כדאי לדעת</th></tr></thead>
+      <tbody>
+        <tr>
+          <td class="rail"><span class="stop"></span></td>
+          <td class="place" data-l="המקום"><b>סאס פורדוי</b><span class="en">Sass Pordoi · Passo Pordoi</span></td>
+          <td data-l="מה עושים">רכבל ממעבר פורדוי לפסגה בגובה 2,950 מ׳ — נופי סאסולונגו והמרמולדה, טיול קצר בפסגה</td>
+          <td class="drive" data-l="זמן נסיעה"><span class="est">≈</span> 1:10 ש׳<small>~50 ק״מ מהמלון דרך ואל גרדנה</small></td>
+          <td class="coord" data-l="קואורדינטות"><a href="https://www.google.com/maps/search/?api=1&query=46.4877,11.8122" target="_blank">46.4877, 11.8122</a></td>
+          <td class="notes" data-l="כדאי לדעת">טיול משוער 1.5–2 שעות · הדרך עצמה (מעברי סלה/פורדוי) היא אטרקציה</td>
+        </tr>
+        <tr>
+          <td class="rail"><span class="stop"></span></td>
+          <td class="place" data-l="המקום"><b>פליי־ליין קטינאצ׳ו</b><span class="en">Fly Line Catinaccio · Vigo di Fassa</span></td>
+          <td data-l="מה עושים">רכבל מוויגו די פאסה + ״פליי־ליין״ — גלישה תלויה איטית בין צמרות היער, כיף לכל הגילים</td>
+          <td class="drive" data-l="זמן נסיעה">38 דק׳<small>24.5 ק״מ מפורדוי</small></td>
+          <td class="coord" data-l="קואורדינטות"><a href="https://www.google.com/maps/search/?api=1&query=46.4190,11.6740" target="_blank">46.4190, 11.6740</a></td>
+          <td class="notes" data-l="כדאי לדעת">טיול משוער 1–2 שעות</td>
+        </tr>
+        <tr>
+          <td class="rail"><span class="stop"></span></td>
+          <td class="place" data-l="המקום"><b>אגם קארצה</b><span class="en">Lago di Carezza</span></td>
+          <td data-l="מה עושים">אגם ״הקשת בענן״ — מים בצבעי טורקיז־אמרלד על רקע רכס הלטמאר</td>
+          <td class="drive" data-l="זמן נסיעה"><span class="est">≈</span> 20 דק׳<small>דרך מעבר קוסטלונגה</small></td>
+          <td class="coord" data-l="קואורדינטות"><a href="https://www.google.com/maps/search/?api=1&query=46.4101,11.5753" target="_blank">46.4101, 11.5753</a></td>
+          <td class="notes" data-l="כדאי לדעת">חניה בתשלום: Via Carezza 123 · תצפית מסודרת סביב האגם, ~45 דק׳</td>
+        </tr>
+        <tr>
+          <td class="rail"><span class="stop"></span></td>
+          <td class="place" data-l="המקום"><b>ספא QC Terme Dolomiti</b><span class="en">Pozza di Fassa</span></td>
+          <td data-l="מה עושים">ספא אלפיני מפנק — בריכות חמות עם נוף להרים, סאונות ואזורי רגיעה</td>
+          <td class="drive" data-l="זמן נסיעה"><span class="est">≈</span> 20 דק׳<small>חזרה לכיוון פוצה די פאסה</small></td>
+          <td class="coord" data-l="קואורדינטות"><a href="https://www.google.com/maps/search/?api=1&query=46.4287,11.6870" target="_blank">46.4287, 11.6870</a></td>
+          <td class="notes" data-l="כדאי לדעת"><span class="warn">להזמין כרטיסים מראש</span> (qcterme.com) — לעיתים לא מכניסים בלי הזמנה · לשים לב: כרטיסים ללא ביטול · חזרה למלון: <span class="est">≈</span> 1:10 ש׳</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</section>
+
+<!-- ================= REGION 3 : GARDA ================= -->
+<section class="region" style="--rc:var(--garda)">
+  <div class="region-head">
+    <span class="num">בסיס 3</span>
+    <h2>אגם גארדה</h2>
+    <span class="dates">חמישי–שני · 30 ביולי – 3 באוגוסט · 4 לילות</span>
+  </div>
+
+  <div class="hotel">
+    <span class="icon">🌊</span>
+    <div class="h-main">
+      <div class="h-label">המלון שלכם</div>
+      <div class="h-name">Hotel Garden · פסקיירה דל גארדה (Peschiera del Garda)</div>
+      <div class="h-meta">30 ביולי – 3 באוגוסט · 2 חדרים · ביטול חינם · מאושר · מיקום מנצח: 5 דק׳ מגארדלנד</div>
+    </div>
+    <div class="h-facts"><span><b>₪6,563</b>4 לילות</span></div>
+    <a class="pin" href="https://www.google.com/maps/search/?api=1&query=Hotel+Garden+Peschiera+del+Garda" target="_blank">נעץ מלון במפה</a>
+    <a class="pin ghost" href="https://www.google.com/maps/search/?api=1&query=45.4400,10.6890" target="_blank">45.4400, 10.6890</a>
+  </div>
+
+  <div class="day">
+    <div class="day-head"><span class="d-date">חמישי 30/7</span><span class="d-title">אגם מולבנו · אגם טנו · מפל וארונה</span><span class="tag">יום מעבר</span></div>
+    <table>
+      <thead><tr><th class="rail"></th><th>המקום</th><th>מה עושים שם</th><th>זמן נסיעה</th><th>קואורדינטות</th><th>כדאי לדעת</th></tr></thead>
+      <tbody>
+        <tr>
+          <td class="rail"><span class="stop"></span></td>
+          <td class="place" data-l="המקום"><b>אגם מולבנו</b><span class="en">Lago di Molveno</span></td>
+          <td data-l="מה עושים">שחייה, סירות וקיאקים, רכבל לרמת פראדל עם תצפית פנורמית — זכה 6 פעמים בתואר האגם היפה באיטליה</td>
+          <td class="drive" data-l="זמן נסיעה"><span class="est">≈</span> 1:30 ש׳<small>~95 ק״מ מהמלון בלצפונס</small></td>
+          <td class="coord" data-l="קואורדינטות"><a href="https://www.google.com/maps/search/?api=1&query=46.1420,10.9640" target="_blank">46.1420, 10.9640</a></td>
+          <td class="notes" data-l="כדאי לדעת">טיול משוער 3–4 שעות · לרכבל: לחנות בחניון הרכבל, ~10 דק׳ הליכה לאגם</td>
+        </tr>
+        <tr>
+          <td class="rail"><span class="stop"></span></td>
+          <td class="place" data-l="המקום"><b>אגם טנו</b><span class="en">Lago di Tenno</span></td>
+          <td data-l="מה עושים">אגם טורקיז קטן ונסתר עם אי במרכזו — עצירת רחצה/צילום</td>
+          <td class="drive" data-l="זמן נסיעה">55 דק׳<small>41.9 ק״מ ממולבנו</small></td>
+          <td class="coord" data-l="קואורדינטות"><a href="https://www.google.com/maps/search/?api=1&query=45.9390,10.8150" target="_blank">45.9390, 10.8150</a></td>
+          <td class="notes" data-l="כדאי לדעת">ירידה רגלית קצרה מהחניה לאגם</td>
+        </tr>
+        <tr>
+          <td class="rail"><span class="stop"></span></td>
+          <td class="place" data-l="המקום"><b>מפל וארונה</b><span class="en">Cascata del Varone</span></td>
+          <td data-l="מה עושים">מפל בתוך מערה/קניון סגור — מרשים ורטוב, חוויה קצרה ומרוכזת</td>
+          <td class="drive" data-l="זמן נסיעה">14 דק׳<small>8.3 ק״מ מטנו</small></td>
+          <td class="coord" data-l="קואורדינטות"><a href="https://www.google.com/maps/search/?api=1&query=45.9050,10.8340" target="_blank">45.9050, 10.8340</a></td>
+          <td class="notes" data-l="כדאי לדעת">ביקור 45 דק׳–שעה · כרטיס 7€</td>
+        </tr>
+        <tr>
+          <td class="rail"><span class="stop hotelstop"></span></td>
+          <td class="place" data-l="המקום"><b>צ׳ק־אין: Hotel Garden</b><span class="en">Peschiera del Garda</span></td>
+          <td data-l="מה עושים">התארגנות ולינה בדרום אגם גארדה</td>
+          <td class="drive" data-l="זמן נסיעה"><span class="est">≈</span> 1:15 ש׳<small>~85 ק״מ ממפל וארונה</small></td>
+          <td class="coord" data-l="קואורדינטות"><a href="https://www.google.com/maps/search/?api=1&query=45.4400,10.6890" target="_blank">45.4400, 10.6890</a></td>
+          <td class="notes" data-l="כדאי לדעת">בסיס מושלם ל־4 הימים הבאים</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+
+  <div class="day">
+    <div class="day-head"><span class="d-date">שישי 31/7</span><span class="d-title">גארדלנד · אקווריום · לאזיסה</span></div>
+    <table>
+      <thead><tr><th class="rail"></th><th>המקום</th><th>מה עושים שם</th><th>זמן נסיעה</th><th>קואורדינטות</th><th>כדאי לדעת</th></tr></thead>
+      <tbody>
+        <tr>
+          <td class="rail"><span class="stop"></span></td>
+          <td class="place" data-l="המקום"><b>גארדלנד</b><span class="en">Gardaland</span></td>
+          <td data-l="מה עושים">״הדיסנילנד האיטלקי״ — 40+ אטרקציות ומתקנים לכל המשפחה</td>
+          <td class="drive" data-l="זמן נסיעה"><span class="est">≈</span> 7 דק׳<small>~4 ק״מ מהמלון</small></td>
+          <td class="coord" data-l="קואורדינטות"><a href="https://www.google.com/maps/search/?api=1&query=45.4571,10.7140" target="_blank">45.4571, 10.7140</a></td>
+          <td class="notes" data-l="כדאי לדעת"><span class="warn">להזמין כרטיסים מראש</span> ולהשוות מחירים (Tiqets וכו׳) · 3 שעות עד יום מלא · בשיא העונה שקלו כרטיס דילוג־תור</td>
+        </tr>
+        <tr>
+          <td class="rail"><span class="stop"></span></td>
+          <td class="place" data-l="המקום"><b>אקווריום SEA LIFE</b><span class="en">Gardaland SEA LIFE</span></td>
+          <td data-l="מה עושים">אקווריום מודרני במתחם גארדלנד — כרישים, מנהרת מים ובריכות מגע</td>
+          <td class="drive" data-l="זמן נסיעה">2 דק׳<small>0.7 ק״מ (כניסה נפרדת)</small></td>
+          <td class="coord" data-l="קואורדינטות"><a href="https://www.google.com/maps/search/?api=1&query=45.4600,10.7160" target="_blank">45.4600, 10.7160</a></td>
+          <td class="notes" data-l="כדאי לדעת">ביקור 1–1.5 שעות · יש כרטיס משולב עם גארדלנד</td>
+        </tr>
+        <tr>
+          <td class="rail"><span class="stop"></span></td>
+          <td class="place" data-l="המקום"><b>לאזיסה</b><span class="en">Lazise</span></td>
+          <td data-l="מה עושים">עיירת חומות ימי־ביניימית על האגם — נמל ציורי, טיילת, פיצה וגלידה לערב</td>
+          <td class="drive" data-l="זמן נסיעה">10 דק׳<small>7 ק״מ מהאקווריום</small></td>
+          <td class="coord" data-l="קואורדינטות"><a href="https://www.google.com/maps/search/?api=1&query=45.5050,10.7330" target="_blank">45.5050, 10.7330</a></td>
+          <td class="notes" data-l="כדאי לדעת">אופציה ב׳ ליום: פארק מים (מובילנד/קאנבה, משולב 44–56€) + ברדולינו · חזרה למלון: <span class="est">≈</span> 15 דק׳</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+
+  <div class="day">
+    <div class="day-head"><span class="d-date">שבת 1/8</span><span class="d-title">סירמיונה · ורונה · (אופציה: חופים)</span></div>
+    <table>
+      <thead><tr><th class="rail"></th><th>המקום</th><th>מה עושים שם</th><th>זמן נסיעה</th><th>קואורדינטות</th><th>כדאי לדעת</th></tr></thead>
+      <tbody>
+        <tr>
+          <td class="rail"><span class="stop"></span></td>
+          <td class="place" data-l="המקום"><b>סירמיונה</b><span class="en">Sirmione</span></td>
+          <td data-l="מה עושים">חצי אי עם טירת סקאליג׳רו, שרידים רומיים (גרוטות קאטולוס), סמטאות וטיילת</td>
+          <td class="drive" data-l="זמן נסיעה"><span class="est">≈</span> 15 דק׳<small>~9 ק״מ מהמלון</small></td>
+          <td class="coord" data-l="קואורדינטות"><a href="https://www.google.com/maps/search/?api=1&query=45.4906,10.6084" target="_blank">45.4906, 10.6084</a></td>
+          <td class="notes" data-l="כדאי לדעת">חניה: Parcheggio Monte Baldo, Via Marconi 4 · מנקודות החובה של גארדה — להגיע מוקדם בשבת</td>
+        </tr>
+        <tr>
+          <td class="rail"><span class="stop"></span></td>
+          <td class="place" data-l="המקום"><b>ורונה</b><span class="en">Verona</span></td>
+          <td data-l="מה עושים">הארנה הרומית, בית יוליה, פיאצה דלה ארבה, גשר פייטרה — עיר של רומיאו ויוליה</td>
+          <td class="drive" data-l="זמן נסיעה">42 דק׳<small>42.1 ק״מ מסירמיונה</small></td>
+          <td class="coord" data-l="קואורדינטות"><a href="https://www.google.com/maps/search/?api=1&query=45.4390,10.9945" target="_blank">45.4390, 10.9945</a></td>
+          <td class="notes" data-l="כדאי לדעת">חזרה למלון: <span class="est">≈</span> 30 דק׳ · אופציה חלופית: יום חופים מומלצים באגם</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+
+  <div class="day">
+    <div class="day-head"><span class="d-date">ראשון 2/8</span><span class="d-title">מונטה באלדו · מלצ׳סינה · שייט ללימונה</span></div>
+    <table>
+      <thead><tr><th class="rail"></th><th>המקום</th><th>מה עושים שם</th><th>זמן נסיעה</th><th>קואורדינטות</th><th>כדאי לדעת</th></tr></thead>
+      <tbody>
+        <tr>
+          <td class="rail"><span class="stop"></span></td>
+          <td class="place" data-l="המקום"><b>רכבל מונטה באלדו</b><span class="en">Funivia Malcesine–Monte Baldo</span></td>
+          <td data-l="מה עושים">עלייה לרכס המשקיף על גארדה — הקטע השני מסתובב 360°, נוף פנורמי ומסלולים בפסגה</td>
+          <td class="drive" data-l="זמן נסיעה"><span class="est">≈</span> 55 דק׳<small>~45 ק״מ מהמלון, החוף המזרחי</small></td>
+          <td class="coord" data-l="קואורדינטות"><a href="https://www.google.com/maps/search/?api=1&query=45.7622,10.8078" target="_blank">45.7622, 10.8078</a></td>
+          <td class="notes" data-l="כדאי לדעת">חונים בחניון הרכבל · 2–4 שעות · למעלה: בר־מסעדה SKYWALK עם נוף</td>
+        </tr>
+        <tr>
+          <td class="rail"><span class="stop"></span></td>
+          <td class="place" data-l="המקום"><b>מלצ׳סינה</b><span class="en">Malcesine</span></td>
+          <td data-l="מה עושים">עיירה ימי־ביניימית עם טירה — כמה דקות הליכה מתחנת הרכבל</td>
+          <td class="drive" data-l="זמן נסיעה">הליכה<small>מתחנת הרכבל</small></td>
+          <td class="coord" data-l="קואורדינטות"><a href="https://www.google.com/maps/search/?api=1&query=45.7640,10.8100" target="_blank">45.7640, 10.8100</a></td>
+          <td class="notes" data-l="כדאי לדעת">הרכב נשאר בחניון הרכבל כל היום</td>
+        </tr>
+        <tr>
+          <td class="rail"><span class="stop"></span></td>
+          <td class="place" data-l="המקום"><b>שייט ללימונה</b><span class="en">Limone sul Garda (ferry)</span></td>
+          <td data-l="מה עושים">שייט חוצה־אגם לעיירת הלימונים בצלע המצוק, סיבוב וגלידה, וחזרה בשייט</td>
+          <td class="drive" data-l="זמן נסיעה">~25 דק׳ שייט<small>לכל כיוון</small></td>
+          <td class="coord" data-l="קואורדינטות"><a href="https://www.google.com/maps/search/?api=1&query=45.8110,10.7920" target="_blank">45.8110, 10.7920</a></td>
+          <td class="notes" data-l="כדאי לדעת">חזרה למלצ׳סינה בשייט → הליכה קצרה לחניה → <span class="est">≈</span> 55 דק׳ למלון</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</section>
+
+<!-- ================= REGION 4 : MILANO ================= -->
+<section class="region" style="--rc:var(--milano)">
+  <div class="region-head">
+    <span class="num">בסיס 4</span>
+    <h2>מילאנו</h2>
+    <span class="dates">שני–רביעי · 3–5 באוגוסט · 2 לילות</span>
+  </div>
+
+  <div class="hotel">
+    <span class="icon">🏛️</span>
+    <div class="h-main">
+      <div class="h-label">הדירה שלכם</div>
+      <div class="h-name">Brera Luxury Apartment near Duomo · מילאנו</div>
+      <div class="h-meta">3–5 באוגוסט · ביטול חינם · מאושר · רובע ברֶרָה — מרחק הליכה מהדואומו</div>
+    </div>
+    <div class="h-facts"><span><b>₪2,472</b>2 לילות</span></div>
+    <a class="pin" href="https://www.google.com/maps/search/?api=1&query=Brera+Luxury+Apartment+near+Duomo+Milano" target="_blank">נעץ דירה במפה</a>
+    <a class="pin ghost" href="https://www.google.com/maps/search/?api=1&query=45.4720,9.1880" target="_blank">45.4720, 9.1880</a>
+  </div>
+
+  <div class="day">
+    <div class="day-head"><span class="d-date">שני 3/8</span><span class="d-title">פסקיירה · אאוטלט פרנצ׳קורטה · הגעה למילאנו</span><span class="tag">יום מעבר</span></div>
+    <table>
+      <thead><tr><th class="rail"></th><th>המקום</th><th>מה עושים שם</th><th>זמן נסיעה</th><th>קואורדינטות</th><th>כדאי לדעת</th></tr></thead>
+      <tbody>
+        <tr>
+          <td class="rail"><span class="stop"></span></td>
+          <td class="place" data-l="המקום"><b>פסקיירה דל גארדה — העיר העתיקה</b><span class="en">Peschiera del Garda</span></td>
+          <td data-l="מה עושים">עיירת מבצר מוקפת חומות (אתר אונסק״ו) בנקודת המפגש של האגם ונהר המינצ׳ו</td>
+          <td class="drive" data-l="זמן נסיעה"><span class="est">≈</span> 5 דק׳<small>צמוד למלון — לפני היציאה</small></td>
+          <td class="coord" data-l="קואורדינטות"><a href="https://www.google.com/maps/search/?api=1&query=45.4390,10.6850" target="_blank">45.4390, 10.6850</a></td>
+          <td class="notes" data-l="כדאי לדעת">חניה ציבורית מסומנת במסלול המקורי (אזור א׳/ב׳)</td>
+        </tr>
+        <tr>
+          <td class="rail"><span class="stop"></span></td>
+          <td class="place" data-l="המקום"><b>אאוטלט פרנצ׳קורטה</b><span class="en">Franciacorta Outlet Village</span></td>
+          <td data-l="מה עושים">קניות במתחם אאוטלט גדול — מותגים איטלקיים ובינלאומיים</td>
+          <td class="drive" data-l="זמן נסיעה">39 דק׳<small>54 ק״מ מפסקיירה</small></td>
+          <td class="coord" data-l="קואורדינטות"><a href="https://www.google.com/maps/search/?api=1&query=45.5930,10.1210" target="_blank">45.5930, 10.1210</a></td>
+          <td class="notes" data-l="כדאי לדעת">הפסקת צהריים נוחה באמצע הדרך למילאנו</td>
+        </tr>
+        <tr>
+          <td class="rail"><span class="stop"></span></td>
+          <td class="place" data-l="המקום"><b>מסעדות כשרות במילאנו</b><span class="en">אזור Via Soderini</span></td>
+          <td data-l="מה עושים">ארוחת ערב באחת המסעדות הכשרות ברובע היהודי של מילאנו</td>
+          <td class="drive" data-l="זמן נסיעה">1:12 ש׳<small>95.7 ק״מ מהאאוטלט</small></td>
+          <td class="coord" data-l="קואורדינטות"><a href="https://www.google.com/maps/search/?api=1&query=45.4520,9.1460" target="_blank">≈ 45.4520, 9.1460</a></td>
+          <td class="notes" data-l="כדאי לדעת">ריכוז המסעדות באזור סודריני — רשימה מלאה במסמך המקורי</td>
+        </tr>
+        <tr>
+          <td class="rail"><span class="stop hotelstop"></span></td>
+          <td class="place" data-l="המקום"><b>צ׳ק־אין: דירת ברֶרָה</b><span class="en">Brera, Milano</span></td>
+          <td data-l="מה עושים">התארגנות בלב מילאנו</td>
+          <td class="drive" data-l="זמן נסיעה">18 דק׳<small>5.5 ק״מ מאזור המסעדות</small></td>
+          <td class="coord" data-l="קואורדינטות"><a href="https://www.google.com/maps/search/?api=1&query=45.4720,9.1880" target="_blank">45.4720, 9.1880</a></td>
+          <td class="notes" data-l="כדאי לדעת"><span class="warn">שימו לב ל־ZTL</span> — אזורי תנועה מוגבלת במרכז מילאנו; לבדוק חניה מול הדירה מראש</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+
+  <div class="day">
+    <div class="day-head"><span class="d-date">שלישי 4/8</span><span class="d-title">מילאנו · טיסה הביתה</span></div>
+    <table>
+      <thead><tr><th class="rail"></th><th>המקום</th><th>מה עושים שם</th><th>זמן נסיעה</th><th>קואורדינטות</th><th>כדאי לדעת</th></tr></thead>
+      <tbody>
+        <tr>
+          <td class="rail"><span class="stop"></span></td>
+          <td class="place" data-l="המקום"><b>דואומו וגלריה ויטוריו אמנואלה</b><span class="en">Duomo di Milano · Galleria</span></td>
+          <td data-l="מה עושים">הקתדרלה הגותית, עלייה לגג (מומלץ!) והגלריה המפוארת הצמודה</td>
+          <td class="drive" data-l="זמן נסיעה">הליכה<small>~10 דק׳ מהדירה</small></td>
+          <td class="coord" data-l="קואורדינטות"><a href="https://www.google.com/maps/search/?api=1&query=45.4642,9.1900" target="_blank">45.4642, 9.1900</a></td>
+          <td class="notes" data-l="כדאי לדעת">כרטיסים לגג הדואומו — מראש, חוסך תור ארוך</td>
+        </tr>
+        <tr>
+          <td class="rail"><span class="stop"></span></td>
+          <td class="place" data-l="המקום"><b>טירת ספורצה ופארק סמפיונה</b><span class="en">Castello Sforzesco</span></td>
+          <td data-l="מה עושים">טירת הרנסנס, החצרות והפארק הגדול שמאחוריה</td>
+          <td class="drive" data-l="זמן נסיעה">הליכה<small>~15 דק׳ דרך רובע ברֶרָה</small></td>
+          <td class="coord" data-l="קואורדינטות"><a href="https://www.google.com/maps/search/?api=1&query=45.4704,9.1793" target="_blank">45.4704, 9.1793</a></td>
+          <td class="notes" data-l="כדאי לדעת">בדרך: סמטאות ברֶרָה — האזור הכי יפה להליכה בעיר</td>
+        </tr>
+        <tr>
+          <td class="rail"><span class="stop"></span></td>
+          <td class="place" data-l="המקום"><b>נבילְיִי (אופציה לערב)</b><span class="en">Navigli</span></td>
+          <td data-l="מה עושים">רובע התעלות — אפריטיבו, אווירה ושקיעה על המים</td>
+          <td class="drive" data-l="זמן נסיעה">~15 דק׳<small>מטרו/מונית מהמרכז</small></td>
+          <td class="coord" data-l="קואורדינטות"><a href="https://www.google.com/maps/search/?api=1&query=45.4522,9.1780" target="_blank">45.4522, 9.1780</a></td>
+          <td class="notes" data-l="כדאי לדעת">רכבת מתחנה מרכזית לשדה: ~1.2€ לכיוון — חוויה נחמדה לילדים</td>
+        </tr>
+        <tr>
+          <td class="rail"><span class="stop hotelstop"></span></td>
+          <td class="place" data-l="המקום"><b>נמל תעופה מלפנסה — טיסה הביתה</b><span class="en">MXP</span></td>
+          <td data-l="מה עושים">החזרת רכב והמראה (בהתאם לשעת הטיסה — 4/8 בערב או 5/8)</td>
+          <td class="drive" data-l="זמן נסיעה">50 דק׳<small>47 ק״מ ממרכז מילאנו</small></td>
+          <td class="coord" data-l="קואורדינטות"><a href="https://www.google.com/maps/search/?api=1&query=45.6301,8.7255" target="_blank">45.6301, 8.7255</a></td>
+          <td class="notes" data-l="כדאי לדעת">להוסיף מרווח להחזרת הרכב ותדלוק · הדירה שמורה עד 5/8</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</section>
+
+<div class="foot">
+  <p><b>איך נבנתה הטבלה:</b> סדר הימים, האטרקציות וזמני הנסיעה בין תחנות נלקחו מקובץ המסלול שצירפת; המלונות והתאריכים — מרשימת ההזמנות. זמנים המסומנים <b style="color:var(--gold)">≈</b> חושבו מחדש מהמלונות שהזמנתם בפועל (ורקוראגו, לצפונס, פסקיירה, ברֶרָה), כי במסמך המקורי החישוב נעשה ממרכזי הערים (קומו, אורטיזיי, סירמיונה) — ההפרשים המשמעותיים: המלון שלכם צמוד ללקו (ולא בקומו) והבסיס בדולומיטים הוא לצפונס (ולא אורטיזיי).</p>
+  <p><b>נעיצה במפה:</b> לחיצה על כל קואורדינטה פותחת סיכה בגוגל מפות בנקודה המדויקת; כפתורי המלונות פותחים חיפוש לפי שם המלון (מדויק יותר לניווט). הקואורדינטות של האטרקציות הן מרכזי האתרים/חניות מומלצות ברמת דיוק של נעיצת סיכה.</p>
+</div>
+
+</body>
+</html>
